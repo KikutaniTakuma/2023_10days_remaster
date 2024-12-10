@@ -58,8 +58,7 @@ void LevelSelect::Update() {
 
 #pragma region カーソル移動
 
-		if (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT, 0.5f).LengthSQ() != 0.0f
-			&& Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT, 0.5f).LengthSQ() != 0.0f) {
+		if (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT, 0.5f).LengthSQ() == 0.0f) {
 			isStick_ = false;
 		}
 
@@ -67,7 +66,7 @@ void LevelSelect::Update() {
 
 		if (Gamepad::GetInstance()->Pushed(Gamepad::Button::UP)
 			|| KeyInput::GetInstance()->Pushed(DIK_UP) || KeyInput::GetInstance()->Pushed(DIK_W)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y > 0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y > 0.6f && !isStick_)
 			) {
 			selectTarget_ -= kWidthCount_;
 			isMoveing = true;
@@ -75,7 +74,7 @@ void LevelSelect::Update() {
 		}
 		if (Gamepad::GetInstance()->Pushed(Gamepad::Button::DOWN)
 			|| KeyInput::GetInstance()->Pushed(DIK_DOWN) || KeyInput::GetInstance()->Pushed(DIK_S)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y < -0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y < -0.6f && !isStick_)
 			) {
 			selectTarget_ += kWidthCount_;
 			isMoveing = true;
@@ -84,7 +83,7 @@ void LevelSelect::Update() {
 
 		if (Gamepad::GetInstance()->Pushed(Gamepad::Button::LEFT)
 			|| KeyInput::GetInstance()->Pushed(DIK_LEFT) || KeyInput::GetInstance()->Pushed(DIK_A)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < 0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < -0.6f && !isStick_)
 			) {
 			selectTarget_ += -1;
 			isMoveing = true;
@@ -92,7 +91,7 @@ void LevelSelect::Update() {
 		}
 		if (Gamepad::GetInstance()->Pushed(Gamepad::Button::RIGHT)
 			|| KeyInput::GetInstance()->Pushed(DIK_RIGHT) || KeyInput::GetInstance()->Pushed(DIK_D)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x > 0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x > 0.6f && !isStick_)
 			) {
 			selectTarget_ += +1;
 			isMoveing = true;

@@ -141,16 +141,16 @@ void LevelSelectScene::Update(const float) {
 
 	dpadSprite_[static_cast<int32_t>(KeyTexture::W)].uvPibot.y = 0.5f * (Gamepad::GetInstance()->GetButton(Gamepad::Button::UP)
 		|| KeyInput::GetInstance()->GetKey(DIK_UP) || KeyInput::GetInstance()->GetKey(DIK_W)
-		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y > 0.0f));
+		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y > 0.6f));
 	dpadSprite_[static_cast<int32_t>(KeyTexture::S)].uvPibot.y = 0.5f * (Gamepad::GetInstance()->GetButton(Gamepad::Button::DOWN)
 		|| KeyInput::GetInstance()->GetKey(DIK_DOWN) || KeyInput::GetInstance()->GetKey(DIK_S)
-		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < -0.0f));
+		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y < -0.6f));
 	dpadSprite_[static_cast<int32_t>(KeyTexture::D)].uvPibot.y = 0.5f * (Gamepad::GetInstance()->GetButton(Gamepad::Button::RIGHT)
 		|| KeyInput::GetInstance()->GetKey(DIK_RIGHT) || KeyInput::GetInstance()->GetKey(DIK_D)
-		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x > 0.0f));
+		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x > 0.6f));
 	dpadSprite_[static_cast<int32_t>(KeyTexture::A)].uvPibot.y = 0.5f * (Gamepad::GetInstance()->GetButton(Gamepad::Button::LEFT)
 		|| KeyInput::GetInstance()->GetKey(DIK_LEFT) || KeyInput::GetInstance()->GetKey(DIK_A)
-		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < -0.0f));
+		|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < -0.6f));
 
 
 

@@ -73,7 +73,7 @@ void LevelResult::Update() {
 	SoLib::ImGuiWidget("origin", &origin_);
 	SoLib::ImGuiWidget("buttonPos", &posRadius_);
 
-	if (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT, 0.5f).LengthSQ() != 0.0f) {
+	if (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT, 0.5f).LengthSQ() == 0.0f) {
 		isStick_ = false;
 	}
 

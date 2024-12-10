@@ -13,6 +13,7 @@ void Fade::StaticInit() {
 	instance->sprite_->scale = WindowFactory::GetInstance()->GetWindowSize();
 
 	auto cameraBuff = Camera{ Camera::Type::Othographic };
+	cameraBuff.pos.z = -10.0f;
 	cameraBuff.Update();
 
 	instance->cameraMat_ = std::make_unique<Mat4x4>(cameraBuff.GetViewOthographics());
@@ -21,6 +22,7 @@ void Fade::StaticInit() {
 
 void Fade::SetState(const Vector2 &pos, uint32_t color) {
 	sprite_->pos = pos;
+	sprite_->pos.z = -5.0f;
 	sprite_->color = kFadeColor_ | (0xFF & color);
 }
 
@@ -47,12 +49,14 @@ void Fade::Update() {
 			std::lerp(originalPos_.x, targetPos_.x, t),
 			std::lerp(originalPos_.y, targetPos_.y, t)
 		};
+		sprite_->pos.z = -5.0f;
 
 		// colorを変更
 		sprite_->color = SoLib::ColorLerp(originalColor_, targetColor_, t);
 
 		if (timer_->IsFinish()) {	// ゴール到達時にのみ走る
 			sprite_->pos = targetPos_;			// 画像位置を設定
+			sprite_->pos.z = -5.0f;			// 画像位置を設定
 			sprite_->color = targetColor_;	// colorを変更
 			timer_->Clear();	// タイマーの初期化
 		}

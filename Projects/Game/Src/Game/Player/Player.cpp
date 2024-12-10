@@ -68,7 +68,7 @@ bool Player::Move() {
 	bool isMove = false;
 	isMove_ = isMove;
 	moveVec_ = Vector2::kZero;
-	if (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).LengthSQ() != 0.0f) {
+	if (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).LengthSQ() == 0.0f) {
 		isStick_ = false;
 	}
 
@@ -80,7 +80,7 @@ bool Player::Move() {
 		&& !KeyInput::GetInstance()->GetKey(DIK_Z) && !KeyInput::GetInstance()->GetPreKey(DIK_Z)) {
 		if (Gamepad::GetInstance()->Pushed(Gamepad::Button::UP)
 			|| KeyInput::GetInstance()->Pushed(DIK_UP) || KeyInput::GetInstance()->Pushed(DIK_W)
-			|| (0.0f < Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y && !isStick_)
+			|| (0.6f < Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y && !isStick_)
 			) {
 			moveVec_ = Vector2::kYIdentity;
 			isMove = true;
@@ -91,7 +91,7 @@ bool Player::Move() {
 		}
 		else if (Gamepad::GetInstance()->Pushed(Gamepad::Button::DOWN)
 			|| KeyInput::GetInstance()->Pushed(DIK_DOWN) || KeyInput::GetInstance()->Pushed(DIK_S)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y < 0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).y < -0.6f && !isStick_)
 			) {
 			moveVec_ = -Vector2::kYIdentity;
 			isMove = true;
@@ -102,7 +102,7 @@ bool Player::Move() {
 		}
 		else if (Gamepad::GetInstance()->Pushed(Gamepad::Button::RIGHT)
 			|| KeyInput::GetInstance()->Pushed(DIK_RIGHT) || KeyInput::GetInstance()->Pushed(DIK_D)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x > 0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x > 0.6f && !isStick_)
 			) {
 			moveVec_ = Vector2::kXIdentity;
 			isMove = true;
@@ -113,7 +113,7 @@ bool Player::Move() {
 		}
 		else if (Gamepad::GetInstance()->Pushed(Gamepad::Button::LEFT)
 			|| KeyInput::GetInstance()->Pushed(DIK_LEFT) || KeyInput::GetInstance()->Pushed(DIK_A)
-			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < 0.0f && !isStick_)
+			|| (Gamepad::GetInstance()->GetStick(Gamepad::Stick::LEFT).x < -0.6f && !isStick_)
 			) {
 			moveVec_ = -Vector2::kXIdentity;
 			isMove = true;
