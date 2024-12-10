@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Src\World\World.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\Action\Frame\Frame.cpp">
+      <Filter>Utils\Action\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\Camera\Camera.cpp">
+      <Filter>Utils\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\Math\Angle.cpp">
+      <Filter>Utils\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\SoLib\SoLib_Easing.cpp">
+      <Filter>Utils\SoLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\SoLib\SoLib_ImGui.cpp">
+      <Filter>Utils\SoLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\SoLib\SoLib_Timer.cpp">
+      <Filter>Utils\SoLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Utils\UIeditor\UIeditor.cpp">
+      <Filter>Utils\UIeditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scenes\GameScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scenes\LevelSelectScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scenes\SceneManager.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scenes\TitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject2D\LevelResult.cpp">
+      <Filter>GameObject2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject2D\LineObject.cpp">
+      <Filter>GameObject2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject2D\Particle.cpp">
+      <Filter>GameObject2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject2D\DieAnimation.cpp">
+      <Filter>GameObject2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject2D\Emitter.cpp">
+      <Filter>GameObject2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject2D\Fade\Fade.cpp">
+      <Filter>GameObject2D\Fade</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\ActiveCamera\ActiveCamera.cpp">
+      <Filter>Game\ActiveCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\LevelSelect\LevelSelect.cpp">
+      <Filter>Game\LevelSelect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Map\Map.cpp">
+      <Filter>Game\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Map\Node\Node.cpp">
+      <Filter>Game\Map\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\MapManager\LeveManager.cpp">
+      <Filter>Game\MapManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Player\Player.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GlobalVariables\GlobalVariables.cpp">
+      <Filter>GlobalVariables</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GlobalVariables">
+      <UniqueIdentifier>{dff28833-6a2e-4902-9a4c-e0a7cb10934b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{e16d5b6d-612f-4477-b4d3-85f9d99b2ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{b8981fb7-5ba2-4533-897e-e706c7dc3049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{fad8cc50-c290-488f-b4fb-cdbad1bbd763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{88060815-5e75-4d91-91d8-a7a79ec82e79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Action">
+      <UniqueIdentifier>{0bccfb58-60cd-488a-bf2f-897b4f214573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Action\Frame">
+      <UniqueIdentifier>{b564cfac-b703-4288-8eb9-8548aa7ab842}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Camera">
+      <UniqueIdentifier>{32fc3235-8dfc-4b45-ba41-23735b799cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Math">
+      <UniqueIdentifier>{5dbc58db-9450-457b-b903-e8bd88bf5004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\SoLib">
+      <UniqueIdentifier>{bf944a92-d584-43b8-88f8-a4c7fdf3e949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\UIeditor">
+      <UniqueIdentifier>{b3a65e6f-acd5-4238-b856-cb3df43542bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject2D">
+      <UniqueIdentifier>{9683b37f-2a8e-4890-b26f-e810f96ae63c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject2D\Fade">
+      <UniqueIdentifier>{fce1754a-a802-4bab-ae9f-e873449be9bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ActiveCamera">
+      <UniqueIdentifier>{2dc8db3c-7148-4266-9c7e-c84c7d4f616d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LevelSelect">
+      <UniqueIdentifier>{c44a0805-988c-4a95-a260-e1b6de7a57a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Map">
+      <UniqueIdentifier>{d83b19a8-9dfe-47fe-acc7-21f535862568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Map\Node">
+      <UniqueIdentifier>{465c5fa1-4ab9-4733-9758-2047c2820457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MapManager">
+      <UniqueIdentifier>{e9275eb0-b5ef-477d-b9bd-0f6a9ebd8ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Player">
+      <UniqueIdentifier>{5f8ce61e-9b77-4032-8ef3-2f23cc509cb3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\World\World.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\Action\Frame\Frame.h">
+      <Filter>Utils\Action\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\Camera\Camera.h">
+      <Filter>Utils\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\Math\Angle.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\Math\ValueRange.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\SoLib\SoLib.h">
+      <Filter>Utils\SoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\SoLib\SoLib_Easing.h">
+      <Filter>Utils\SoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\SoLib\SoLib_ImGui.h">
+      <Filter>Utils\SoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\SoLib\SoLib_Timer.h">
+      <Filter>Utils\SoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\SoLib\SoLib_Traits.h">
+      <Filter>Utils\SoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Utils\UIeditor\UIeditor.h">
+      <Filter>Utils\UIeditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scenes\GameScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scenes\LevelSelectScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scenes\SceneManager.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scenes\TitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject2D\LevelResult.h">
+      <Filter>GameObject2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject2D\LineObject.h">
+      <Filter>GameObject2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject2D\Particle.h">
+      <Filter>GameObject2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject2D\DieAnimation.h">
+      <Filter>GameObject2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject2D\Emitter.h">
+      <Filter>GameObject2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject2D\Fade\Fade.h">
+      <Filter>GameObject2D\Fade</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\ActiveCamera\ActiveCamera.h">
+      <Filter>Game\ActiveCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\LevelSelect\LevelSelect.h">
+      <Filter>Game\LevelSelect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Map\Map.h">
+      <Filter>Game\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Map\Node\Node.h">
+      <Filter>Game\Map\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\MapManager\LevelManager.h">
+      <Filter>Game\MapManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Player\Player.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GlobalVariables\GlobalVariables.h">
+      <Filter>GlobalVariables</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GlobalVariables\VariantItem.h">
+      <Filter>GlobalVariables</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
