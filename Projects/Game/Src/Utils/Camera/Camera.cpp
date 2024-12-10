@@ -80,14 +80,14 @@ void Camera::Update(const Vector3& gazePoint) {
 				gazePointRotate -= moveRotateBuf;
 			}
 			if (Mouse::GetInstance()->LongPush(Mouse::Button::Middle)) {
-				moveVec = Mouse::GetInstance()->GetVelocity().Normalize() * moveSpd * ImGui::GetIO().DeltaTime;
+				moveVec = Mouse::GetInstance()->GetVelocity().Normalize() * moveSpd * Lamb::DeltaTime();
 				moveVec *= Mat4x4::MakeRotateX(rotate.x) * Mat4x4::MakeRotateY(rotate.y) * Mat4x4::MakeRotateZ(rotate.z);
 				pos -= moveVec;
 			}
 			if (Mouse::GetInstance()->GetWheelVelocity() != 0.0f) {
 				moveVec.z = Mouse::GetInstance()->GetWheelVelocity();
 				moveSpd = 6.6f;
-				moveVec = moveVec.Normalize() * moveSpd * ImGui::GetIO().DeltaTime;
+				moveVec = moveVec.Normalize() * moveSpd * Lamb::DeltaTime();
 				moveVec *= Mat4x4::MakeRotateX(rotate.x) * Mat4x4::MakeRotateY(rotate.y) * Mat4x4::MakeRotateZ(rotate.z);
 				pos += moveVec;
 			}
@@ -96,7 +96,7 @@ void Camera::Update(const Vector3& gazePoint) {
 			moveSpd = 15.0f;
 
 			if (Mouse::GetInstance()->LongPush(Mouse::Button::Middle)) {
-				moveVec = Mouse::GetInstance()->GetVelocity().Normalize() * moveSpd * ImGui::GetIO().DeltaTime;
+				moveVec = Mouse::GetInstance()->GetVelocity().Normalize() * moveSpd * Lamb::DeltaTime();
 				moveVec *= Mat4x4::MakeRotateX(rotate.x) * Mat4x4::MakeRotateY(rotate.y) * Mat4x4::MakeRotateZ(rotate.z);
 				pos -= moveVec * drawScale;
 			}

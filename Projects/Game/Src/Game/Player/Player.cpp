@@ -147,7 +147,7 @@ void Player::Update() {
 			mapPos_.y -= moveVec_.Normalize().y;
 		}
 		pos_ = Vector2::Lerp(startPos_, moveToPos_, SoLib::easeOutExpo(easeT_));
-		easeT_ += easeSpd_ * ImGui::GetIO().DeltaTime;
+		easeT_ += easeSpd_ * Lamb::DeltaTime();
 		if (easeT_ >= 1.0f) {
 			easeT_ = 0.0f;
 			pos_ = moveToPos_;

@@ -119,7 +119,7 @@ void MapNode::Update() {
 			//	mapPos_.y -= moveVec_.Normalize().y;*/
 			//}
 			pos_ = Vector2::Lerp(startPos_, moveToPos_, SoLib::easeOutExpo(easeMoveT_));
-			easeMoveT_ += easeMoveSpd_ * ImGui::GetIO().DeltaTime;
+			easeMoveT_ += easeMoveSpd_ * Lamb::DeltaTime();
 			if (easeMoveT_ >= 1.0f) {
 				easeMoveT_ = 0.0f;
 				pos_ = moveToPos_;
@@ -310,7 +310,7 @@ void MapNode::ConectAnimation() {
 	if (isAni_) {
 		heart_.scale = Vector2::Lerp(conectHeartScale_, conectHeartMaxScale_, SoLib::easeOutElastic(easeT_));
 		heart_.color = SoLib::ColorLerp(heartColor_, heartMaxColor_, easeT_);
-		easeT_ += easeSpd_ * ImGui::GetIO().DeltaTime;
+		easeT_ += easeSpd_ * Lamb::DeltaTime();
 		if (easeT_ > 1.0f) {
 			heart_.scale = conectHeartMaxScale_;
 			heart_.color = heartMaxColor_;

@@ -132,10 +132,10 @@ void LevelSelect::Update() {
 	// 演出
 	currentTexSize = Vector2::Lerp(texMinSize_, texMaxSize_, SoLib::easeInExpo(easeT));
 	if (!isMinas_) {
-		easeT += easeSpd * ImGui::GetIO().DeltaTime;
+		easeT += easeSpd * Lamb::DeltaTime();
 	}
 	else {
-		easeT -= easeSpd * ImGui::GetIO().DeltaTime;
+		easeT -= easeSpd * Lamb::DeltaTime();
 	}
 
 	if (easeT >= 1.0f) {

@@ -4,6 +4,8 @@
 #include <imgui.h>
 #include "Game/ActiveCamera/ActiveCamera.h"
 
+#include "Engine/EngineUtils/FrameInfo/FrameInfo.h"
+
 void DieAnimation::Init() {
 	playerSprite_.Load("Resources/dead.png");
 	playerSprite_.scale = Vector2::kIdentity * Map::GetTileSize();
@@ -43,7 +45,7 @@ void DieAnimation::Start(const Vector2 &playerPos) {
 		emitter_.spawnArea_.origin_ = playerPos + Vector2{ 0.f,-14.f };
 		playerSprite_.pos = playerPos;
 
-		const auto flameRate = ImGui::GetIO().Framerate;
+		const auto flameRate = FrameInfo::GetInstance()->GetFps();
 		actCamera_->Start(playerPos / 2.f, 1.f / 2.f, static_cast<int32_t>(kZoomTimer_ * flameRate));
 	}
 }

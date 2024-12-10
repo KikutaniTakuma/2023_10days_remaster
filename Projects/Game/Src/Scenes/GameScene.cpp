@@ -524,7 +524,7 @@ void GameScene::Update(const float deltaTime) {
 	if (direction_) {
 		/*direction_->Debug("direction_");*/
 		direction_->pos = Vector2::Lerp(directionStartPos_, directionEndPos_, SoLib::easeInOutSine(direcitonEaseT_));
-		direcitonEaseT_ += direcitonEaseSpd_ * ImGui::GetIO().DeltaTime;
+		direcitonEaseT_ += direcitonEaseSpd_ * Lamb::DeltaTime();
 		if (direcitonEaseT_ >= 1.0f) {
 			direcitonEaseT_ = 1.0f;
 			direcitonEaseSpd_ *= -1.0f;

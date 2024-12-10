@@ -313,7 +313,7 @@ void Map::Update() {
 		for (auto& i : hints_) {
 			i.color = SoLib::ColorLerp(hintMinColor_, hintMaxColor_, hintEaseT_);
 		}
-		hintEaseT_ += hintEaseSpd_ * ImGui::GetIO().DeltaTime;
+		hintEaseT_ += hintEaseSpd_ * Lamb::DeltaTime();
 		if (hintEaseT_ >= 1.0f) {
 			hintEaseT_ = 1.0f;
 			hintEaseSpd_ *= -1.0f;
