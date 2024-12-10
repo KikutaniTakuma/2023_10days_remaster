@@ -2,15 +2,15 @@ name: DebugBuild
 
 on:
   push:
-    branches: [ "master", "Engine-Update" ]
+    branches: "master"
   pull_request:
-    branches: [ "master", "Engine-Update" ]
+    branches: "master"
   workflow_dispatch : 
-    branches: [ "master", "Engine-Update" ]
+    branches: "master"
 
 
 env:
-  SOLUTION_FILE_PATH: LambEngine.sln
+  SOLUTION_FILE_PATH: 2023_10days_remaster.sln
   CONFIGURATION: Debug
 
 jobs:
