@@ -5,6 +5,11 @@
 #include <fstream>
 #include <Windows.h> 
 
+#ifdef _DEBUG
+#include "imgui.h"
+#endif // _DEBUG
+
+
 GlobalVariables::GlobalVariables(const std::string &fileNmae) :
 	datas(),
 	isCreate(false),
@@ -26,6 +31,9 @@ const GlobalVariables::Group &GlobalVariables::GetGroup(const std::string &group
 
 
 void GlobalVariables::Update() {
+#ifdef _DEBUG
+
+
 	if (!ImGui::Begin(" Global Variables", nullptr, ImGuiWindowFlags_MenuBar)) {
 		ImGui::End();
 		return;
@@ -78,6 +86,7 @@ void GlobalVariables::Update() {
 
 	ImGui::EndMenuBar();
 	ImGui::End();
+#endif // _DEBUG
 }
 
 void GlobalVariables::SaveFile(const std::string &groupName) {
