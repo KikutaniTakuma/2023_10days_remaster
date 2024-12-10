@@ -62,10 +62,10 @@ void LevelResult::Init() {
 		buttonSprite_[i]->pos = origin_ + Vector2{ offsetX * posRadius_ ,0.f };
 	}
 
-	AudioManager::GetInstance()->Load("./Resources/Sound/SE/walk.wav");
-	AudioManager::GetInstance()->Load("./Resources/Sound/SE/choice.wav");
-	cursorMoveSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/walk.wav");
-	choiseSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/choice.wav");
+	AudioManager::GetInstance()->Load("./Resources/Sound/SE/walk.mp3");
+	AudioManager::GetInstance()->Load("./Resources/Sound/SE/choice.mp3");
+	cursorMoveSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/walk.mp3");
+	choiseSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/choice.mp3");
 }
 
 void LevelResult::Update() {

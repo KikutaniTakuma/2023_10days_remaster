@@ -203,10 +203,10 @@ void Map::Initialize(const std::string& fileName, bool isHint) {
 	isLineConect_ = false;
 	isLineDisconect_ = false;
 
-	AudioManager::GetInstance()->Load("./Resources/Sound/SE/line_connect.wav");
-	AudioManager::GetInstance()->Load("./Resources/Sound/SE/line_cancel.wav");
-	lineConectSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/line_connect.wav");
-	lineDisconectSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/line_cancel.wav");
+	AudioManager::GetInstance()->Load("./Resources/Sound/SE/line_connect.mp3");
+	AudioManager::GetInstance()->Load("./Resources/Sound/SE/line_cancel.mp3");
+	lineConectSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/line_connect.mp3");
+	lineDisconectSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/line_cancel.mp3");
 	isDie_ = false;
 
 	isPreDie_ = false;

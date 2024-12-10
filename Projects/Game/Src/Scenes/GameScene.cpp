@@ -155,15 +155,15 @@ void GameScene::OnEnter() {
 	cameraBuff.Update();
 	freezeCameraMat_ = cameraBuff.GetViewOthographics();
 
-	audioManager_->Load("./Resources/Sound/BGM/stage.wav");
-	bgm_ = audioManager_->Get("./Resources/Sound/BGM/stage.wav");
+	audioManager_->Load("./Resources/Sound/BGM/stage.mp3");
+	bgm_ = audioManager_->Get("./Resources/Sound/BGM/stage.mp3");
 	if (bgm_) {
 		bgm_->Start(0.45f, true);
 	}
-	audioManager_->Load("./Resources/Sound/SE/clear_short.wav");
-	clearSe_ = audioManager_->Get("./Resources/Sound/SE/clear_short.wav");
-	audioManager_->Load("./Resources/Sound/SE/death.wav");
-	dieSe_ = audioManager_->Get("./Resources/Sound/SE/death.wav");
+	audioManager_->Load("./Resources/Sound/SE/clear_short.mp3");
+	clearSe_ = audioManager_->Get("./Resources/Sound/SE/clear_short.mp3");
+	audioManager_->Load("./Resources/Sound/SE/death.mp3");
+	dieSe_ = audioManager_->Get("./Resources/Sound/SE/death.mp3");
 
 	duraion_ = std::chrono::milliseconds(800);
 

@@ -57,14 +57,14 @@ void TitleScene::OnEnter() {
 
 	cameraMat_ = cameraBuff.GetViewOthographics();
 
-	audioManager_->Load("./Resources/Sound/BGM/title_stageSelect.wav");
-	bgm_ = audioManager_->Get("./Resources/Sound/BGM/title_stageSelect.wav");
+	audioManager_->Load("./Resources/Sound/BGM/title_stageSelect.mp3");
+	bgm_ = audioManager_->Get("./Resources/Sound/BGM/title_stageSelect.mp3");
 	if (bgm_) {
 		bgm_->Start(0.3f, true);
 	}
 
-	audioManager_->Load("Resources/Sound/SE/choice.wav");
-	selectSE_ = audioManager_->Get("Resources/Sound/SE/choice.wav");
+	audioManager_->Load("Resources/Sound/SE/choice.mp3");
+	selectSE_ = audioManager_->Get("Resources/Sound/SE/choice.mp3");
 
 	auto textureManager = TextureManager::GetInstance();
 	// このフレームで画像読み込みが発生していたらTextureをvramに送る

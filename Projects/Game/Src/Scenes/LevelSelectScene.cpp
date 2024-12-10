@@ -34,11 +34,11 @@ void LevelSelectScene::OnEnter() {
 	Fade::GetInstance()->Start(Vector2::kZero, 0x00000000, 10);
 
 
-	audioManager_->Load("Resources/Sound/SE/choice.wav");
-	selectSE_ = audioManager_->Get("Resources/Sound/SE/choice.wav");
+	audioManager_->Load("Resources/Sound/SE/choice.mp3");
+	selectSE_ = audioManager_->Get("Resources/Sound/SE/choice.mp3");
 
-	audioManager_->Load("./Resources/Sound/BGM/title_stageSelect.wav");
-	bgm_ = audioManager_->Get("./Resources/Sound/BGM/title_stageSelect.wav");
+	audioManager_->Load("./Resources/Sound/BGM/title_stageSelect.mp3");
+	bgm_ = audioManager_->Get("./Resources/Sound/BGM/title_stageSelect.mp3");
 	if (bgm_) {
 		bgm_->Start(0.3f, true);
 	}

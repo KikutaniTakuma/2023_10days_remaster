@@ -31,8 +31,8 @@ void LevelSelect::Init() {
 	}
 
 	auto *const audioManager = AudioManager::GetInstance();
-	audioManager->Load("Resources/Sound/SE/walk.wav");
-	moveSE_ = audioManager->Get("Resources/Sound/SE/walk.wav");
+	audioManager->Load("Resources/Sound/SE/walk.mp3");
+	moveSE_ = audioManager->Get("Resources/Sound/SE/walk.mp3");
 
 	texMaxSize_ = Vector2::kIdentity * defaultIconScale_ * 1.05f;
 	texMinSize_ = Vector2::kIdentity * defaultIconScale_ * 1.0f;

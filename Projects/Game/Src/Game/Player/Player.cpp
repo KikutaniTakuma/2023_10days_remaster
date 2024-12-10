@@ -44,10 +44,10 @@ void Player::Initialize(
 
 	mapPos_ = mapPos;
 
-	AudioManager::GetInstance()->Load("./Resources/Sound/SE/walk.wav");
-	AudioManager::GetInstance()->Load("./Resources/Sound/SE/dontMove.wav");
-	moveSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/walk.wav");
-	cannotSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/dontMove.wav");
+	AudioManager::GetInstance()->Load("./Resources/Sound/SE/walk.mp3");
+	AudioManager::GetInstance()->Load("./Resources/Sound/SE/dontMove.mp3");
+	moveSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/walk.mp3");
+	cannotSe_ = AudioManager::GetInstance()->Get("./Resources/Sound/SE/dontMove.mp3");
 
 	easeT_ = 0.0f;
 	easeSpd_ = 10.0f;
