@@ -3,7 +3,6 @@
 #include "Input/KeyInput/KeyInput.h"
 #include "Input/Mouse/Mouse.h"
 #include "Input/Gamepad/Gamepad.h"
-#include "imgui.h"
 #include "Engine/Core/WindowFactory/WindowFactory.h"
 
 #include "Utils/EngineInfo.h"

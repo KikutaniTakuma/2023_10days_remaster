@@ -1,6 +1,9 @@
 #pragma once
 #include <stdint.h>
+#ifdef _DEBUG
 #include "imgui.h"
+#endif // _DEBUG
+
 
 #include "Math/Vector2.h"
 #include "Math/Vector3.h"
@@ -38,7 +41,7 @@ template<typename T>
 bool SoLib::ImGuiWidget(VariantItem<T> *const value) { return SoLib::ImGuiWidget(value->GetKey().c_str(), &value->GetItem()); }
 
 template<typename T>
-bool SoLib::ImGuiWidget(const char *const label, ValueRange<T> *const value) {
+bool SoLib::ImGuiWidget([[maybe_unused]]const char *const label, [[maybe_unused]] ValueRange<T> *const value) {
 	bool isAction = false;
 
 #ifdef _DEBUG
@@ -48,9 +51,6 @@ bool SoLib::ImGuiWidget(const char *const label, ValueRange<T> *const value) {
 		isAction |= SoLib::ImGuiWidget("max", &(value->max_));
 		ImGui::TreePop();
 	}
-#else
-	label; value;
-
 #endif // _DEBUG
 
 	return isAction;

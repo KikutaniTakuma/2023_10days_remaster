@@ -1,5 +1,4 @@
 #include "GlobalVariables/GlobalVariables.h"
-#include "imgui.h"
 #include "json.hpp"
 #include <cassert>
 #include <filesystem>

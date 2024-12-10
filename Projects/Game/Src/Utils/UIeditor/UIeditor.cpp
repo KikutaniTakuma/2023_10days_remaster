@@ -1,6 +1,9 @@
 #include "UIeditor.h"
 #include "Input/Mouse/Mouse.h"
+#ifdef _DEBUG
 #include "imgui.h"
+#endif // _DEBUG
+
 #include "Engine/Core/WindowFactory/WindowFactory.h"
 #include "json.hpp"
 #include <fstream>
@@ -12,6 +15,9 @@ UIeditor* UIeditor::GetInstance() {
 }
 
 void UIeditor::Update() {
+#ifdef _DEBUG
+
+
 	if (!ImGui::Begin("UIEditor", nullptr, ImGuiWindowFlags_MenuBar)) {
 		ImGui::End();
 		return;
@@ -119,6 +125,7 @@ void UIeditor::Update() {
 		auto uvSizeTmp = GetVector3Value(i.first, "uvSize");
 		i.second.uvSize = { uvSizeTmp.x,uvSizeTmp.y };
 	}
+#endif // _DEBUG
 }
 
 void UIeditor::Update(const Mat4x4& vpvpMat) {
