@@ -27,7 +27,9 @@ void MapNode::Initialize(
 	tex_.uvPibotSpd_ = tex_.GetTexSize().y / tex_.GetTexSize().x;
 	tex_.uvSize.x = tex_.uvPibotSpd_;
 
-
+	if (type_ == Type::kHole) {
+		tex_.pos.z = 2.0f;
+	}
 
 	if (type_ == Type::kMove || type_ == Type::kGoal) {
 		heart_.Load(heartFileName);
@@ -44,6 +46,7 @@ void MapNode::Initialize(
 		i.Load(portFileName);
 		i.scale = tex_.scale * 0.3f;
 		i.pos = pos_;
+		i.pos.z = 1.0f;
 		//i.color = 0xffa500ff;
 	}
 

@@ -31,7 +31,7 @@ void LineObject::SetPos(const Vector2 &start, const Vector2 &end, const float ti
 	end_ = origin_ + lineDiff.Normalize() * radius_ * tileSize;
 
 	// SpriteのTransformの変更。
-	sprite_.pos.z = 0.01f;
+	sprite_.pos.z = -1.0f;
 	sprite_.pos = origin_;
 	sprite_.rotate.z = Angle::Vec2ToRad(lineDiff);
 	sprite_.scale.y = tileSize;
